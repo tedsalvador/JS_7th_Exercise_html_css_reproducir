@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 50vh;
     background-color: #f0f0f0;
 }
 
@@ -17,7 +17,7 @@ header {
     background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 main {
@@ -25,7 +25,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .emoji-container {
@@ -33,21 +33,21 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
 }
 
 .emoji-item {
     font-size: 2rem;
     padding: 1rem;
-    background-color: white;
+    background-color: #4e3d3d;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: transform 0.2s;
     opacity: 1;
-    width: calc(25% - 1rem); /* Each column takes up 25% minus gap */
-    height: 100px; /* Make each cell rectangular */
+    flex: 1 0 calc(20% - 1rem); /* Each item takes up 25% minus gap */
+    height: 70px; /* Make each cell rectangular */
     display: flex;
     justify-content: center;
     align-items: center;
