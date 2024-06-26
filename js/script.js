@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function fadeEffect(index) {
         const element = emojiItems[index];
+
+        const element1 = emojiItems[14];
+        const element2 = emojiItems[15];
+        element1.classList.add('hidden');
+        element2.classList.add('hidden'); 
+
         element.classList.add('hidden');
         setTimeout(() => {
             element.classList.remove('hidden');
@@ -24,8 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startSequentialFade() {
         let index = 0;
+
         setInterval(() => {
-            fadeEffect(index);
+            if (index < 14){
+                fadeEffect(index);
+            }
             index = (index + 1) % emojiItems.length;
         }, 2000); // Cada 2 segundos desaparece y reaparece una celda
     }
