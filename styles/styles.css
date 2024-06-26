@@ -1,0 +1,70 @@
+/* Reset some basic styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.emoji-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 80%;
+    margin: auto;
+}
+
+.emoji-item {
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+    opacity: 1;
+    width: calc(25% - 1rem); /* Each column takes up 25% minus gap */
+    height: 100px; /* Make each cell rectangular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emoji-item:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
